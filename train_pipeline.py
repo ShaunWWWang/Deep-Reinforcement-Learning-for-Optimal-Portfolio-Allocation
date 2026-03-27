@@ -45,7 +45,7 @@ from environment import PortfolioEnv
 #  Hyperparameters (Table 1)
 # ============================================================
 
-TOTAL_TIMESTEPS = 7_500_000
+TOTAL_TIMESTEPS = 100_000
 N_ENVS          = 10
 N_STEPS         = 756          # per environment; total rollout = 756 * 10 = 7 560
 BATCH_SIZE      = 1_260        # = 252 * 5
@@ -55,7 +55,7 @@ GAE_LAMBDA      = 0.9
 CLIP_RANGE      = 0.25
 LR_START        = 3e-4
 LR_END          = 1e-5
-N_SEEDS         = 5            # agents trained per window
+N_SEEDS         = 1            # agents trained per window
 
 POLICY_KWARGS = dict(
     net_arch       = dict(pi=[64, 64], vf=[64, 64]),
